@@ -31,7 +31,7 @@ export const Users = () => {
           </Button>
         </div>
         <List pendinguser={pending} users={users} />
-        {addModal ? (
+        {addModal && (
           <AddUserModal
             onClose={() => toggleModal()}
             onSubmit={onSubmit}
@@ -39,8 +39,6 @@ export const Users = () => {
             setEmail={setEmail}
             error={error}
           />
-        ) : (
-          <></>
         )}
       </div>
     </Container>
